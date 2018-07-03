@@ -29,7 +29,8 @@ def login_view(request):
     else:
         form = AuthenticationForm()
     return render(request,'accounts/login.html',{'form':form})
+    
 def logout_view(request):
-    if request.method == POST:
+    if request.method == 'POST':
         logout(request)
     return redirect('articles:list')

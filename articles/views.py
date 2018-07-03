@@ -12,3 +12,5 @@ def article_deatail(request,slug):
     article = Article.objects.get(slug = slug)
 
     return render(request,'articles/article_deatail.html', {'article':article} )
+def article_create(request):
+    return HttpResponse('create page')

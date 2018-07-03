@@ -9,10 +9,25 @@
   <link rel="stylesheet" href='{% static "style.css" %}'>
 </head>
 <body>
+  <h1>My Blog</h1>
+  <nav>
+    <ul>
+      <li>
+        <form class="logout-link" action="/accounts/logout/" method = "POST" >
+          {% csrf_token %}
+          <button type="submit" >LogOut</button>
+        </form>
+      </li>
+      <li>
+        <form class="login-link" action="/accounts/login/">
+          <button type="submit" >Log in</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
   <div class="wrapper">
     {% block content%}
     {%endblock%}
   </div>
-
 </body>
 </html>
