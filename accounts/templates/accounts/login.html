@@ -1,13 +1,13 @@
 {% extends 'base_layout.html'%}
 {% block content%}
-<h1>SignUp</h1>
+<h1>Log in</h1>
 
 <!-- post the request to account/signup utl -->
-<form class ="site-form" action= "/accounts/signup/" method="POST">
+<form class ="site-form" action= "/accounts/login/" method="POST">
   {% csrf_token %}
   {{form}}
 
-  <input type="submit" value="SignUp" >
+  <input type="submit" value="Log in" >
 
 </form>
 {% endblock %}
