@@ -12,17 +12,18 @@
   <h1>My Blog</h1>
   <nav>
     <ul>
-      <li>
-        <form class="logout-link" action="/accounts/logout/" method = "POST" >
-          {% csrf_token %}
-          <button type="submit" >LogOut</button>
-        </form>
-      </li>
-      <li>
-        <form class="login-link" action="/accounts/login/">
-          <button type="submit" >Log in</button>
-        </form>
-      </li>
+      {% if user.is_authenticated %}
+        <li>
+          <form class="logout-link" action="/accounts/logout/" method = "POST" >
+            {% csrf_token %}
+            <button type="submit" >LogOut</button>
+          </form>
+        </li>
+        <li><a href="/articles/create/">New Article</a></li>
+        {% else %}
+          <li><a href="/accounts/login/">Log in</a></li>
+          <li><a href="/accounts/signup/">Sign Up</a></li>
+      {% endif %}
     </ul>
   </nav>
   <div class="wrapper">
