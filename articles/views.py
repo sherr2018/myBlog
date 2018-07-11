@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Article
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 from .forms import CreareArticle
 # Create your views here.
@@ -28,3 +28,6 @@ def article_create(request):
     else:
         form = CreareArticle()
         return render(request,'articles/create.html',{'form':form})
+
+def user_name(request):
+    return JsonResponse({"foo":"voo"})

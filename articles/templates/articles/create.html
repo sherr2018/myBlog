@@ -1,16 +1,13 @@
-{% extends 'base_layout.html'%}
-
-
-
-{% block content%}
+{% extends 'base_layout.html'%} {% block content%}
 
 <div class="create_article">
   <h2>Create new Article</h2>
-  <form action="/articles/create/" class="site-form" method = "POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value = "Create"  >
+  <form action="/articles/create/" class="site-form" method="POST" enctype="multipart/form-data">
+    {% csrf_token %} {{form}}
+    <input type="submit" value="Create">
   </form>
 </div>
+
+<script link="slugify.js"></script>
 
 {% endblock %}

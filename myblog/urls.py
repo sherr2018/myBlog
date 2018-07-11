@@ -8,7 +8,7 @@ from articles import views as article_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',article_view.article_list),
+    path('',views.home),
     path('about/',views.about),
     path('articles/', include('articles.urls')),
     path('accounts/',include('accounts.urls')),

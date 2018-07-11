@@ -7,6 +7,8 @@ urlpatterns = [
 
     path('',views.article_list, name= 'list'),
     path('create/',views.article_create, name = 'create'),
-    path('<slug>/',views.article_detail,name = 'detail'),
+    path('user_name/',views.user_name),
+    path('<slug>/',views.article_detail, name = 'detail'),
+
 
 ]

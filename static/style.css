@@ -179,3 +179,9 @@ nav li:hover{
 .site-form[action="/accounts/login/"] #id_username{
   margin-bottom:20px;
 }
+
+.home a{
+  border-top:1px solid #00dbae;
+  border-bottom:1px solid #00dbae;
+  padding:10px;
+}
